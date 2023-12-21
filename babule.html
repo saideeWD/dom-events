@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      .newbutton{
+        margin-left: 500px;
+        background-color: aquamarine;
+    height: 40px;
+       
+      }
+    </style>
+</head>
+<body>
+    <h1>My list
+    </h1>
+    <div id="container">
+        <ul id="myList">
+            <li id="first" class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, mollitia!</li>
+            <li class="item">Odio earum temporibus quasi voluptatibus excepturi inventore, cupiditate placeat alias.</li>
+            <li class="item">Vero explicabo accusamus consequuntur odit assumenda cumque voluptatibus, pariatur exercitationem.</li>
+            <li class="item">Ut, earum neque mollitia cum consequuntur magnam. Quidem, aliquid perferendis!</li>
+            <li class="item">Sapiente recusandae architecto eius eos, numquam earum aperiam dignissimos quaerat.</li>
+        </ul>
+    </div>
+    <button id="addNew" class="newbutton">add a new button</button>
+    <h1>hello my first web site hi am </h1>
+    
+</body>
+<script>
+    // // const items = document.getElementsByClassName("item");
+    // // for (let i = 0; i < items.length; i++) {
+    // //     const element = items[i];
+    // //     console.log(element);
+    // //     element.addEventListener('click', function(event){
+    // //         event.target.parentNode.removeChild(event.target);
+    // //     })
+        
+    //  }
+    document.getElementById('addNew').addEventListener('click',function(event){
+       var itemParent =  document.getElementById('myList');
+       var newItem =document.createElement('ul');
+       newItem.innerText = "Brand a new item";
+       itemParent.appendChild(newItem);
+    })
+    // document.getElementById('first').addEventListener('click', function(event){
+
+    //     console.log("click me my button")
+    //     event.stopPropagation();
+    // })
+    
+    
+
+//     document.getElementById('container').addEventListener('click', function(event){
+
+// console.log("Containear me my button");
+// event.stopPropagation();
+// })
+
+
+
+document.getElementById('myList').addEventListener('click', function(event){
+
+console.log(this, event.target);
+event.target.parentNode.removeChild(event.target);
+
+})
+</script>
+</html>
